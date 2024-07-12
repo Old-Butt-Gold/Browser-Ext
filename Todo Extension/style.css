@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 350px;
+}
+
+#container {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+#new-task {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    outline: none;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+}
+
+#add-task {
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#add-task:hover {
+    background-color: #45A049;
+}
+
+#task-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #2C2C2C;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+#task-list li span {
+    flex-grow: 1;
+    margin-left: 10px;
+    word-break: break-all;
+}
+
+input[type='checkbox'] {
+    cursor: pointer;
+}
+
+button:not(#add-task) {
+    margin-left: 5px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:not(#add-task):hover {
+    background-color: #45A049;
+}
+
+button.remove {
+    background-color: #E53935;
+}
+
+button.remove:hover {
+    background-color: #D32F2F;
+}
