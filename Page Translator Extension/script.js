@@ -107,10 +107,15 @@ const languages = [
 
 document.addEventListener('DOMContentLoaded', () => {
     const langSelect = document.getElementById('language');
+    const browserLang = navigator.language || navigator.languages[0];
+
     languages.forEach(lang => {
         const option = document.createElement('option');
         option.value = lang.code;
         option.textContent = lang.name;
+        if (browserLang.toLowerCase().startsWith(lang.code.toLowerCase())) {
+            option.selected = true;
+        }
         langSelect.appendChild(option);
     });
 
